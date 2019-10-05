@@ -1,0 +1,30 @@
+# BASHRC #
+#        #
+##########
+
+#### PROMPT MODIFICATIONS ####
+PS1='\[\033[0;37m\]\u\[\033[0;37m\] @ \[\033[0;37m\]\h \W\[\033[0;37m\]$(git branch 2>/dev/null)\n\[\033[0;37m\]└─\[\033[0;37m\] \$\[\033[0;37m\] ▶\[\033[0m\] '
+
+export PS1
+
+#### ALIASES ####
+alias codehole='cd ~/Documents/Programming'
+alias nasm=/usr/local/bin/nasm
+alias nb='jupyter notebook >/dev/null 2>&1 &'
+alias cat='bat'
+
+#### LSCOLORS ####
+#export CLICOLOR=1
+#export LSCOLORS=GxFxCxDxBxegedabagaced
+
+export PATH=$PATH:.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+# LATEX PATH Additions
+export PATH=$PATH:/usr/local/texlive/2019basic/bin/x86_64-darwin
+export PATH=$PATH:/Users/mickey/Applications/bin
+
+# PYENV VARIABLES
+export PYENV_ROOT=/usr/local/opt/pyenv  
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
